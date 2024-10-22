@@ -1,5 +1,6 @@
 {
     "version":  "6.20",
     "url":  "https://www.harddisksentinel.com/hdsentinel_pro_portable.zip",
-    "bin":  "HDSentinel.exe"
+    "bin":  "HDSentinel.exe",
+    "hash":  "b729df27fb4b5d52ea7d13c665162caf3cecd38f3c667d8812f8f267f91e70ff"
 }
