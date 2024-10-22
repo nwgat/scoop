@@ -1,0 +1,7 @@
+{
+    "version":  "v4.8.1",
+    "license":  "GPL-2.0",
+    "url":  "https://github.com/espressif/esptool/releases/download/v4.8.1/esptool-v4.8.1-win64.zip",
+    "homepage":  "https://github.com/espressif/esptool",
+    "hash":  "2483d409e241d8826ae0ff023eecf31a7d4de6c10ca5ee855b1420cdfd53aaf6"
+}
