@@ -3,5 +3,6 @@
     "extract_dir":  "rd-usb",
     "url":  "https://github.com/kolinger/rd-usb/releases/download/1.24.0/rd-usb-v1.24.0.exe",
     "homepage":  "https://github.com/kolinger/rd-usb",
-    "bin":  "rd-usb-v1.24.0.exe"
+    "bin":  "rd-usb-v1.24.0.exe",
+    "hash:  "b729df27fb4b5d52ea7d13c665162caf3cecd38f3c667d8812f8f267f91e70ff"
 }
