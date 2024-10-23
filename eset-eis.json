@@ -1,6 +1,5 @@
-
-
 {
     "version":  "latest",
+    "description": "ESET Internet Security from eset.com ",
     "url":  "https://download.eset.com/com/eset/apps/home/eis/windows/latest/eis_nt64.exe"
 }
