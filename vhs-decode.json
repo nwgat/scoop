@@ -1,0 +1,8 @@
+{
+    "version":  "0.3.0",
+    "extract_dir":  "vhs-decode",
+    "url":  "https://github.com/oyvindln/vhs-decode/releases/download/0.3.0/decode_suite_full_windows_2024_09_12.zip",
+    "homepage":  "https://github.com/oyvindln/vhs-decode/",
+    "bin":  "decode_suite_full_windows_2024_09_12.zip",
+    "hash":  "
+}
