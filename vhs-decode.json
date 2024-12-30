@@ -4,5 +4,5 @@
     "url":  "https://github.com/oyvindln/vhs-decode/releases/download/0.3.0/decode_suite_full_windows_2024_09_12.zip",
     "homepage":  "https://github.com/oyvindln/vhs-decode/",
     "hash":  "4807e8fb4f0fd3b99c4a058e8b469bb20e608a3cbbd5fe80175bd205c689e2e3",
-    "bin":  "vhs-decode\0.3.0\decode.exe"
+    "bin":  "vhs-decode/0.3.0/decode.exe"
 }
