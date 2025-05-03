@@ -1,8 +1,8 @@
 {
     "version": "0.3.4",
     "license": "GPL-3.0",
-    "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.4/decode_windows_x86_64_V0.3.4.zip",
+    "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.4/decode_suite_full_v0.3.4.zip",
     "homepage": "https://github.com/oyvindln/vhs-decode/",
-    "hash": "799576F598BAB586164C0B35CDD570A450C9F05DCA3AD2E2384421803CFF7F51",
+    "hash": "317583923F1E0A3AA07CC29EA0191851BC1D0259489E5F343676B2FC13AEDDF1",
     "bin": ["decode.exe", "ld-analyse.exe"]
 }
