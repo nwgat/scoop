@@ -4,5 +4,5 @@
     "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.4/decode_windows_x86_64_V0.3.4.zip",
     "homepage": "https://github.com/oyvindln/vhs-decode/",
     "hash": "799576F598BAB586164C0B35CDD570A450C9F05DCA3AD2E2384421803CFF7F51",
-    "bin": ["decode.exe"]
+    "bin": ["decode.exe", "ld-analyse.exe"]
 }
