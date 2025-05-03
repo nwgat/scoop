@@ -4,5 +4,5 @@
     "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.4/decode_suite_full_v0.3.4.zip",
     "homepage": "https://github.com/oyvindln/vhs-decode/",
     "hash": "317583923F1E0A3AA07CC29EA0191851BC1D0259489E5F343676B2FC13AEDDF1",
-    "bin": ["decode.exe", "ld-analyse.exe"]
+    "bin": ["decode_suite_full_v0.3.4/decode.exe", "decode_suite_full_v0.3.4/ld-analyse.exe"]
 }
