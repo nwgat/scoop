@@ -1,0 +1,7 @@
+{
+    "version":  "v4.0",
+    "description": "Stress Tester",
+    "license":  "Freeware",
+    "url":  "https://downloads.jam-software.de/heavyload/HeavyLoad-x64.zip",
+    "bin": "heavyload.exe"
+}
