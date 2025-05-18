@@ -1,12 +1,13 @@
 {
-    "version": "0.3.4",
+    "version": "0.3.5",
     "license": "GPL-3.0",
-    "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.4/decode_suite_full_v0.3.4.zip",
+    "url": "https://github.com/oyvindln/vhs-decode/releases/download/v0.3.5/decode_suite_full_v0.3.5_windows_x86_64.zip",
     "homepage": "https://github.com/oyvindln/vhs-decode/",
-    "hash": "317583923F1E0A3AA07CC29EA0191851BC1D0259489E5F343676B2FC13AEDDF1",
+    "hash": "2a65cbf4015d026c5fdb992fb2377a4d37d28a97808ef732579162a1187f5a60",
     "bin": [
-        "decode_suite_full_v0.3.4/decode.exe",
-        "decode_suite_full_v0.3.4/ld-analyse.exe",
-        "decode_suite_full_v0.3.4/tbc-video-export.exe"
+        "decode/decode.exe",
+        "decode/ld-analyse.exe",
+        "decode/tbc-video-export.exe"
     ]
 }
+
