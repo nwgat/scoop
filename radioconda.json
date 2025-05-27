@@ -3,7 +3,7 @@
     "license": "GPL",
     "homepage": "https://github.com/ryanvolz/radioconda/",
     "url": "https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
-    "hash": "YOUR_CALCULATED_HASH_HERE", // Get this from scoop's error message or by calculating it
+    "hash": "YOUR_CALCULATED_HASH_HERE", 
     "depends": [], 
     "installer": {
         "args": [
@@ -19,8 +19,8 @@
         "Scripts\\conda.exe",
         "Scripts\\activate.bat",
         "Scripts\\deactivate.bat",
-        "python.exe", // If python is in the root of $dir after install
-        "App\\Miniconda3\\Scripts\\conda.exe" // Example if it installs into a sub-folder like App\Miniconda3
+        "python.exe", 
+        "App\\Miniconda3\\Scripts\\conda.exe" 
     ],
     "shortcuts": [
         ["GNURadio Companion.lnk", "Library\\bin\\gnuradio-companion.exe"]
