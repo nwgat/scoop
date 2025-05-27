@@ -1,9 +1,0 @@
-{
-    "version":  "17.6.0",
-    "description": "VMware Workstation Pro is a hosted hypervisor that runs on x64 versions of Windows and Linux operating system",
-    "license":  "proprietary",
-    "url":  "https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.6.0/24238078/windows/core/VMware-workstation-17.6.0-24238078.exe.tar",
-    "homepage":  "https://vmware.com",
-    "hash":  "8866101cd4d411dc4f75ecba2458b95ad5ca4edd177e2a500a9d3662ea37fc50",
-    "bin":  ""
-}
