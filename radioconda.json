@@ -1,9 +1,7 @@
 {
     "version":  "2025.03.14",
-    "license":  "GPL",
+    "license":  "BSD",
     "url":  "https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
-    "depends":  "",
-    "homepage":  "",
-    "hash":  "",
-    "bin":  ""
+    "homepage":  "ttps://github.com/ryanvolz/radioconda",
+    "hash":  ""
 }
