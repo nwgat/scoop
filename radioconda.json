@@ -1,7 +1,34 @@
 {
-    "version":  "2025.03.14",
-    "license":  "BSD",
-    "url":  "https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
-    "homepage":  "ttps://github.com/ryanvolz/radioconda",
-    "hash":  "d64c316df6f5e76d9f46eaf5e1409aa5fc633e125f5a7d49e8931fa6453b2fee"
+    "version": "2025.03.14",
+    "license": "GPL",
+    "homepage": "https://github.com/ryanvolz/radioconda/",
+    "url": "https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
+    "hash": "YOUR_CALCULATED_HASH_HERE", // Get this from scoop's error message or by calculating it
+    "depends": [], // Assuming no dependencies for now
+    "installer": {
+        "args": [
+            "/S", // Common silent flag for NSIS installers
+            "/D=$dir" // Installs to the scoop app directory
+        ]
+        // If the above doesn't work, you might need a script block as shown in point 4.
+        // "script": "Invoke-ExternalCommand \"$dir\\radioconda-2025.03.14-Windows-x86_64.exe\" -ArgumentList @('/S', \"/D=$dir\") -RunAs | Out-Null"
+    },
+    "uninstaller": {
+        // You'll need to find the uninstaller, often Uninstall.exe in the install directory
+        "file": "Uninstall.exe",
+        "args": "/S"
+    },
+    "bin": [
+        // These are guesses and need to be confirmed after checking the installed files
+        "Scripts\\conda.exe",
+        "Scripts\\activate.bat",
+        "Scripts\\deactivate.bat",
+        "python.exe", // If python is in the root of $dir after install
+        "App\\Miniconda3\\Scripts\\conda.exe" // Example if it installs into a sub-folder like App\Miniconda3
+        // Add paths to GNU Radio executables, e.g., "Library\\bin\\gnuradio-companion.exe"
+    ],
+    "shortcuts": [
+        // Example: Create a shortcut for GNU Radio Companion
+        // ["GNURadio Companion.lnk", "Library\\bin\\gnuradio-companion.exe"]
+    ]
 }
