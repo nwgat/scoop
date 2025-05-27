@@ -3,7 +3,7 @@
     "license": "GPL",
     "homepage": "https://github.com/ryanvolz/radioconda/",
     "url": "https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
-    "hash": "YOUR_CALCULATED_HASH_HERE", 
+    "hash": "", 
     "depends": [], 
     "installer": {
         "args": [
