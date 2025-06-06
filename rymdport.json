@@ -1,0 +1,13 @@
+{
+    "version": "3.8.0",
+    "description": "A cross-platform file sharing application with a focus on security and speed.",
+    "homepage": "https://github.com/Jacalz/rymdport",
+    "license": "ISC",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jacalz/rymdport/releases/download/v3.8.0/rymdport-v3.8.0-windows-amd64.zip",
+            "hash": "f87b25c8652f88bce439fec5c7c3f77e447497c3ae23b620489b7505f5b8087a"
+        }
+    },
+    "bin": "Rymdport.exe"
+}
