@@ -1,0 +1,83 @@
+{
+    "version": "1.1",
+    "description": "Open source driver for CX23880/1/2/3 PCIe video capture cards, including capture tools and scripts.",
+    "homepage": "https://github.com/JuniorIsAJitterbug/cxadc-win",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "1. This package requires Administrator privileges to install the driver.",
+        "2. IMPORTANT: You must reboot after enabling Test Mode for the driver to load.",
+        "3. To load the PowerShell modules in your session, run:",
+        "   Import-Module \"$(scoop prefix cxadc-win)\\bin\\CxadcWin.psm1\" -Force",
+        "   Import-Module \"$(scoop prefix cxadc-win)\\bin\\CxadcClockGen.psm1\" -Force"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JuniorIsAJitterbug/cxadc-win/releases/download/v1.1/cxadc-win-v1.1-x64.zip",
+            "hash": "1c4e880371327fdc6fd18817ae21166716a1120fb86c613f8f8f2c9cc9ff4e9e"
+        }
+    },
+    "env_add_path": "bin",
+    "bin": [
+        ["enable-cxadc-testmode.ps1", "enable-cxadc-testmode"],
+        "bin\\leveladj.exe",
+        "bin\\capture-server.exe",
+        "bin\\LocalCapture.ps1"
+    ],
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"Administrator rights are required to install drivers. Please run with 'sudo' or in an Admin terminal.\"; break }",
+            "",
+            "# --- 1. Generate Helper Script for Test Mode ---",
+            "Write-Host \"Creating helper script 'enable-cxadc-testmode'...\" -ForegroundColor Cyan",
+            "$helperPath = \"$dir\\enable-cxadc-testmode.ps1\"",
+            "$helperContent = @(",
+            "    'if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { Write-Error \"Administrator privileges required. Run: sudo enable-cxadc-testmode\"; exit 1 }',",
+            "    'Write-Host \"Attempting to enable Test Signing...\" -ForegroundColor Cyan',",
+            "    '$res = bcdedit /set testsigning on 2>&1',",
+            "    'if ($LASTEXITCODE -eq 0) { Write-Host \"[SUCCESS] Test Mode enabled. Please REBOOT your computer.\" -ForegroundColor Green }',",
+            "    'else { Write-Host \"[ERROR] Failed to enable Test Mode.\" -ForegroundColor Red; Write-Host $res; if ($res -match \"Secure Boot\") { Write-Host \"HINT: Disable Secure Boot in BIOS.\" -ForegroundColor Yellow } }'",
+            ")",
+            "Set-Content -Path $helperPath -Value $helperContent",
+            "",
+            "# --- 2. Check Requirements (Color Coded) ---",
+            "Write-Host \"Checking system requirements...\" -ForegroundColor Cyan",
+            "try {",
+            "    if (Confirm-SecureBootUEFI) {",
+            "        Write-Host \"[WARNING] Secure Boot is ENABLED. The driver will fail to load.\" -ForegroundColor Red",
+            "    } else {",
+            "        Write-Host \"[OK] Secure Boot is DISABLED.\" -ForegroundColor Green",
+            "    }",
+            "} catch {}",
+            "",
+            "$bcd = bcdedit /enum \"{current}\" | Out-String",
+            "if ($bcd -match \"testsigning\\s+Yes\") {",
+            "    Write-Host \"[OK] Test Mode is ENABLED.\" -ForegroundColor Green",
+            "} else {",
+            "    Write-Host \"[WARNING] Test Mode is OFF. Driver will not load until enabled.\" -ForegroundColor Red",
+            "    Write-Host \"    Run 'sudo enable-cxadc-testmode' to fix this.\" -ForegroundColor Magenta",
+            "}",
+            "",
+            "# --- 3. Install Driver via PNPUtil ---",
+            "Write-Host \"Installing cxadc-win driver...\" -ForegroundColor Cyan",
+            "pnputil /add-driver \"$dir\\driver\\cxadc-win.inf\" /install"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"Administrator rights are required to uninstall drivers.\"; break }",
+            "Write-Host \"Uninstalling cxadc-win driver...\" -ForegroundColor Cyan",
+            "pnputil /delete-driver \"$dir\\driver\\cxadc-win.inf\" /force"
+        ]
+    },
+    "checkver": {
+        "url": "https://github.com/JuniorIsAJitterbug/cxadc-win/releases",
+        "regex": "/releases/tag/v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JuniorIsAJitterbug/cxadc-win/releases/download/v$version/cxadc-win-v$version-x64.zip"
+            }
+        }
+    }
+}``
