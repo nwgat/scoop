@@ -1,5 +1,5 @@
 {
-    "version": "1.1",
+    "version": "1.2",
     "description": "Open source driver for CX23880/1/2/3 PCIe video capture cards, including capture tools and scripts.",
     "homepage": "https://github.com/JuniorIsAJitterbug/cxadc-win",
     "license": "GPL-2.0-only",
@@ -12,8 +12,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/JuniorIsAJitterbug/cxadc-win/releases/download/v1.1/cxadc-win-v1.1-x64.zip",
-            "hash": "1c4e880371327fdc6fd18817ae21166716a1120fb86c613f8f8f2c9cc9ff4e9e"
+            "url": "https://github.com/JuniorIsAJitterbug/cxadc-win/releases/download/v1.2/cxadc-win-v1.2-x64.zip",
+            "hash": "86f77084bc15ccf0ec9cad0d96a7000fd829bfa27ef79bdd784a85cdce080bbb"
         }
     },
     "env_add_path": "bin",
@@ -80,4 +80,4 @@
             }
         }
     }
-}``
+}
