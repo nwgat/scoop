@@ -1,0 +1,29 @@
+{
+    "version": "1.38",
+    "description": "A tool to monitor AMD Ryzen memory timings, voltages, and frequencies.",
+    "homepage": "https://zentimings.protonrom.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/irusanov/ZenTimings/releases/download/v1.38/ZenTimings_v1.38.zip",
+            "hash": "e677c59b187bd39264f021029ed03d6339a1a7895a87333b3637c8adfd037f41"
+        }
+    },
+    "bin": "ZenTimings.exe",
+    "shortcuts": [
+        [
+            "ZenTimings.exe",
+            "ZenTimings"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/irusanov/ZenTimings"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/irusanov/ZenTimings/releases/download/v$version/ZenTimings_v$version.zip"
+            }
+        }
+    }
+}
