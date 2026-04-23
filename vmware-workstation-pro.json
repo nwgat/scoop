@@ -1,0 +1,30 @@
+{
+    "version": "25H2u1-25219725",
+    "description": "VMware Workstation Pro",
+    "homepage": "https://www.vmware.com/products/workstation-pro.html",
+    "license": "Freeware",
+    "url": "https://archive.org/download/vmware-workstation-full-25-h-2u-1-25219725_202604/VMware-Workstation-Full-25H2u1-25219725.exe",
+    "hash": "b592c47756d47c932a3ce2c2b83ad3af1fa23ccc1dd1d3166a51bcc1d2bd58e0",
+    "installer": {
+        "args": [
+            "/s",
+            "/v\"/qn EULA_ACCEPT=YES\""
+        ]
+    },
+    "uninstaller": {
+        "exe": "msiexec.exe",
+        "args": [
+            "/x",
+            "{6780C263-D44D-4E11-9A3F-0C82D770E8B2}",
+            "/qn"
+        ]
+    },
+    "bin": "vmware.exe",
+    "shortcuts": [
+        [
+            "vmware.exe",
+            "VMware Workstation"
+        ]
+    ],
+    "notes": "VMware Workstation Pro requires administrative privileges to install system drivers and services. Please ensure you are running Scoop from an elevated terminal."
+}
