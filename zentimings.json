@@ -12,8 +12,8 @@
     "bin": "ZenTimings.exe",
     "shortcuts": [
         [
-            "ZenTimings.exe",
-            "ZenTimings"
+            "zentimings.exe",
+            "zentimings"
         ]
     ],
     "checkver": {
