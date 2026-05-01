@@ -1,0 +1,47 @@
+{
+    "version": "7.9.0",
+    "description": "IM-Magic Partition Resizer Free. Portable partition manager to expand, move, shrink, and merge partitions without losing data.",
+    "homepage": "https://www.resize-c.com/",
+    "license": "Freeware",
+    "url": "https://download.resize-c.com/resizer-free-portable.zip",
+    "hash": "b91f22dd8073ea92a889fea236d3a11b006d217f7ce68b528d65b90751a3af40",
+    "extract_dir": "resizer-free-portable",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "x64\\dm.resizer.exe",
+                    "dm.resizer"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "x64\\dm.resizer.exe",
+                    "IM-Magic Partition Resizer Free"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "x86\\dm.resizer.exe",
+                    "dm.resizer"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "x86\\dm.resizer.exe",
+                    "IM-Magic Partition Resizer Free"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://www.resize-c.com/",
+        "regex": "upgraded to version v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.resize-c.com/resizer-free-portable.zip",
+        "extract_dir": "resizer-free-portable"
+    }
+}
