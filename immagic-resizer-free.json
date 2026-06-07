@@ -4,7 +4,7 @@
     "homepage": "https://www.resize-c.com/",
     "license": "Freeware",
     "url": "https://download.resize-c.com/resizer-free-portable.zip",
-    "hash": "b91f22dd8073ea92a889fea236d3a11b006d217f7ce68b528d65b90751a3af40",
+    "hash": "",
     "extract_dir": "resizer-free-portable",
     "architecture": {
         "64bit": {
